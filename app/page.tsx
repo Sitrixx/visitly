@@ -2,7 +2,7 @@ import Image from "next/image";
 import avatar from "../public/images/test_avatar.png";
 import GithubWidget from "../components/widgets/github/GithubWidget";
 import LinkedinWidget from "../components/widgets/linkedin/LinkedinWidget";
-import MaltWidget from "../components/widgets/malt/Maltwidget";
+import MaltWidget from "../components/widgets/malt/MaltWidget";
 import BuyMeACoffeWidget from "../components/widgets/buymeacofffe/BuyMeACoffeeWidget";
 
 export default function Home() {
