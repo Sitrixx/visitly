@@ -1,9 +1,12 @@
 import Image from "next/image";
-import avatar from "../public/images/test_avatar.png";
-import GithubWidget from "../components/widgets/github/GithubWidget";
-import LinkedinWidget from "../components/widgets/linkedin/LinkedinWidget";
-import MaltWidget from "../components/widgets/malt/MaltWidget";
-import BuyMeACoffeWidget from "../components/widgets/buymeacofffe/BuyMeACoffeeWidget";
+import avatar from "@/public/images/test_avatar.png";
+import GithubWidget from "@/components/widgets/github/GithubWidget";
+import LinkedinWidget from "@/components/widgets/linkedin/LinkedinWidget";
+import MaltWidget from "@/components/widgets/malt/MaltWidget";
+// import MapsWidget from "@/components/widgets/maps/MapsWidget";
+import ChatbotWidget from "@/components/widgets/chatbot-perso/ChatbotWidget";
+import BuyMeACoffeeWidget from "@/components/widgets/buymeacofffe/BuyMeACoffeeWidget";
+// import SpotifyWidget from "@/components/widgets/spotify/SpotifyWidget";
 
 export default function Home() {
   return (
@@ -19,7 +22,9 @@ export default function Home() {
         <GithubWidget username="Sitrixx" />
         <LinkedinWidget />
         <MaltWidget />
-        <BuyMeACoffeWidget />
+        <BuyMeACoffeeWidget />
+        <ChatbotWidget />
+        {/* <MapsWidget /> */}
       </section>
     </main>
   );
