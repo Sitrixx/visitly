@@ -7,11 +7,12 @@ import MaltWidget from "@/components/widgets/malt/MaltWidget";
 import ChatbotWidget from "@/components/widgets/chatbot-perso/ChatbotWidget";
 import BuyMeACoffeeWidget from "@/components/widgets/buymeacofffe/BuyMeACoffeeWidget";
 // import SpotifyWidget from "@/components/widgets/spotify/SpotifyWidget";
+import VScodeWidget from "@/components/widgets/vscode/VScodeWidget";
 
 export default function Home() {
   return (
     <main>
-      <section className="p-10 flex items-center justify-center">
+      <section className="p-10 pb-3 md:pb-5 flex items-center justify-center">
         <Image
           alt="avatar"
           src={avatar}
@@ -19,11 +20,15 @@ export default function Home() {
         />
       </section>
       <section className="flex justify-center flex-col items-center">
+        <h1 className="font-bold m-6 text-xl md:text-2xl">LINKS</h1>
         <GithubWidget username="Sitrixx" />
         <LinkedinWidget />
         <MaltWidget />
         <BuyMeACoffeeWidget />
+        <h1 className="font-bold m-6 md:m-8 text-xl md:text-2xl">UTILS</h1>
         <ChatbotWidget />
+        {/* <SpotifyWidget /> */}
+        <VScodeWidget />
         {/* <MapsWidget /> */}
       </section>
     </main>

@@ -31,7 +31,7 @@ const Boxes: React.FC<BoxesProps> = ({ input, response }) => {
         </div>
       ) : (
         <div className="p-2 text-left">
-          <p className="bg-[#b3ff98] p-4 inline-block rounded-lg md:text-xl">
+          <p className="bg-[#7abafe] p-4 inline-block rounded-lg md:text-xl">
             ...
           </p>
         </div>
