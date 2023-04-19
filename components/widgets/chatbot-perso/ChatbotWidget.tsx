@@ -14,13 +14,13 @@ const ChatbotWidget: React.FC = () => {
     setInputValue(event.target.value);
   };
 
-  const handleClick = async (event: any) => {
+  const handleClick = async () => {
     const response = await detectIntent(inputValue);
     setChatbotBoxes((prevList) => [
       ...prevList,
       <Boxes key={prevList.length} input={inputValue} response={response} />,
     ]);
-    setInputValue(event.target.value);
+    setInputValue("");
   };
 
   return (
@@ -37,12 +37,14 @@ const ChatbotWidget: React.FC = () => {
               type="text"
               value={inputValue}
               onChange={handleChange}
+              id="chatbox-input"
               className="m-1 rounded-lg px-3 outline-none md:px-4 w-full"
               placeholder="Write your query here..."
             />
             <button
               onClick={handleClick}
               className="bg-white p-3 m-1 rounded-lg"
+              id="chatbox-button"
             >
               <AiOutlineSend />
             </button>

@@ -71,7 +71,7 @@ const VScodeWidget: React.FC = () => {
     };
 
     getProject();
-  });
+  }, []);
 
   return (
     <div className="flex flex-row justify-between bg-[#005BA4] rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center">

@@ -9,6 +9,7 @@ const MaltWidget: React.FC = () => {
     <Link
       href={"https://www.malt.fr/profile/enzoauriau"}
       target="_blank"
+      id="malt-link"
       className="flex flex-row justify-between bg-[#D5534F] rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center"
     >
       <div className="flex flex-row items-center">

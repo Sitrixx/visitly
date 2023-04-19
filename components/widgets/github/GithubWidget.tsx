@@ -23,6 +23,7 @@ const GithubWidget = ({ username }: GithubProps) => {
   return (
     <Link
       href={data.html_url}
+      id="github-link"
       target="_blank"
       className="flex flex-row justify-between bg-black rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center"
     >

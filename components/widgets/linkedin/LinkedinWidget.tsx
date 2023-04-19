@@ -9,6 +9,7 @@ const LinkedinWidget: React.FC = () => {
     <Link
       href={"https://www.linkedin.com/in/enzo-auriau/"}
       target="_blank"
+      id="linkedin-link"
       className="flex flex-row justify-between bg-[#0077B5] rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center"
     >
       <div className="flex flex-row items-center">

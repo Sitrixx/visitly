@@ -1,4 +1,5 @@
 {
+  "ignorePatterns": ["**/*.cy.ts", "**/*.cy.js"],
   "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
   "globals": {
     "globalThis": true,

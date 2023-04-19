@@ -9,6 +9,7 @@ const BuyMeACoffeWidget: React.FC = () => {
     <Link
       href={"https://www.buymeacoffee.com/sitrixxx"}
       target="_blank"
+      id="buymeacoffee-link"
       className="flex flex-row justify-between bg-[#FFDC03] rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center"
     >
       <div className="flex flex-row items-center">
