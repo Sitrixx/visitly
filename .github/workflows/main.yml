@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Visitly Cypress Tests
 
 on: push
 
@@ -9,6 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cypress run
+        env:
+          NEXT_PUBLIC_BACKEND_URL: ${{secrets.NEXT_PUBLIC_BACKEND_URL}}
+          NEXT_PUBLIC_SUPABASE_URL: ${{secrets.NEXT_PUBLIC_SUPABASE_URL}}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY}}
         uses: cypress-io/github-action@v5
         with:
           build: npm run build
