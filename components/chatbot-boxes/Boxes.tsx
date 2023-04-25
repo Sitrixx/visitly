@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-interface BoxesProps {
+interface IBoxesProps {
   input: string;
   response: string;
 }
 
-const Boxes: React.FC<BoxesProps> = ({ input, response }) => {
+const Boxes: React.FC<IBoxesProps> = ({ input, response }) => {
   const [showContent, setShowContent] = useState<boolean>(false);
 
   useEffect(() => {

@@ -15,13 +15,13 @@ import axios from "axios";
 // } from "react-icons/si";
 // import { VscJson } from "react-icons/vsc";
 
-interface VScodeProps {
+interface IVScodeProps {
   vscode_project: string;
   vscode_file: string;
 }
 
 const VScodeWidget: React.FC = () => {
-  const [project, setProject] = useState<VScodeProps>({
+  const [project, setProject] = useState<IVScodeProps>({
     vscode_project: "",
     vscode_file: "",
   });

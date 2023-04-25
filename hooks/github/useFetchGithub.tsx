@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import axios, { AxiosError } from "axios";
 
-interface GithubData {
+interface IGithubData {
   login: string;
   public_repos: number;
   followers: number;
@@ -11,14 +11,14 @@ interface GithubData {
   html_url: string;
 }
 
-interface HookState {
-  data: GithubData | null;
+interface IHookState {
+  data: IGithubData | null;
   isLoading: boolean;
   error: AxiosError | null;
 }
 
-function useFetchGithub(username: string): HookState {
-  const [data, setData] = useState<GithubData | null>(null);
+function useFetchGithub(username: string): IHookState {
+  const [data, setData] = useState<IGithubData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<AxiosError | null>(null);
 

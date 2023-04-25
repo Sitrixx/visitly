@@ -5,11 +5,11 @@ import githubLogo from "../../../public/images/Github/github.svg";
 import useFetchGithub from "@/hooks/github/useFetchGithub";
 import Link from "next/link";
 
-interface GithubProps {
+interface IGithubProps {
   username: string;
 }
 
-const GithubWidget = ({ username }: GithubProps) => {
+const GithubWidget = ({ username }: IGithubProps) => {
   const { data, isLoading, error } = useFetchGithub(username);
 
   if (isLoading) {

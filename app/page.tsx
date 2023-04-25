@@ -6,18 +6,21 @@ import MaltWidget from "@/components/widgets/malt/MaltWidget";
 // import MapsWidget from "@/components/widgets/maps/MapsWidget";
 import ChatbotWidget from "@/components/widgets/chatbot-perso/ChatbotWidget";
 import BuyMeACoffeeWidget from "@/components/widgets/buymeacofffe/BuyMeACoffeeWidget";
-// import SpotifyWidget from "@/components/widgets/spotify/SpotifyWidget";
+import SpotifyWidget from "@/components/widgets/spotify/SpotifyWidget";
 import VScodeWidget from "@/components/widgets/vscode/VScodeWidget";
 
 export default function Home() {
   return (
     <main>
-      <section className="p-10 pb-3 md:pb-5 flex items-center justify-center">
+      <section className="p-10 pb-3 md:pb-5 flex items-center justify-center flex-row">
         <Image
           alt="avatar"
           src={avatar}
-          className="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-52 xl:h-52 flex justify-center items-center"
+          className="rounded-full m-2 w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-52 xl:h-52 flex justify-center items-center"
         />
+        <h1 className="m-2 font-bold text-xl md:text-3xl lowercase">
+          @Sitrixx
+        </h1>
       </section>
       <section className="flex justify-center flex-col items-center">
         <h1 className="font-bold m-6 text-xl md:text-2xl">LINKS</h1>
@@ -27,7 +30,7 @@ export default function Home() {
         <BuyMeACoffeeWidget />
         <h1 className="font-bold m-6 md:m-8 text-xl md:text-2xl">UTILS</h1>
         <ChatbotWidget />
-        {/* <SpotifyWidget /> */}
+        <SpotifyWidget />
         <VScodeWidget />
         {/* <MapsWidget /> */}
       </section>

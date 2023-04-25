@@ -24,7 +24,7 @@ const ChatbotWidget: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row justify-between bg-gradient-chatbox rounded-2xl w-5/6 m-2 py-4 px-4 md:px-6 md:py-6 items-center">
+    <div className="flex flex-row justify-between bg-gradient-chatbox rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center">
       <div className="flex flex-col items-center w-full">
         {chatbotBoxes.length !== 0 ? (
           <div className="m-2 w-full overflow-scroll max-h-40">
