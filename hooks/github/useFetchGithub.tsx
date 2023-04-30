@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import axios, { AxiosError } from "axios";
 
-interface IGithubData {
+export interface IGithubData {
   login: string;
   public_repos: number;
   followers: number;
