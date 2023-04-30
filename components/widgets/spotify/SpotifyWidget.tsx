@@ -3,14 +3,11 @@ import Image from "next/image";
 import useSpotifyAuth from "@/hooks/spotify/useSpotifyAuth";
 import Link from "next/link";
 import { useRef } from "react";
-import { useIsOverflow } from "@/hooks/utils/useIsOverflow";
 
 const SpotifyWidget: React.FC = () => {
   const { song, isLoading, error } = useSpotifyAuth();
   const divRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const isDivOverflow = useIsOverflow(divRef);
-  const isHeadingOverflow = useIsOverflow(headingRef);
 
   return (
     <div className="flex flex-row justify-between bg-gradient-spotify rounded-2xl w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center">
@@ -49,20 +46,13 @@ const SpotifyWidget: React.FC = () => {
             >
               <h1
                 ref={headingRef}
-                className={`text-white text-lg font-semibold md:text-3xl hover:underline ${
-                  isHeadingOverflow && "animate-scroll-text"
-                }`}
+                className="text-white text-lg font-semibold md:text-3xl hover:underline"
               >
                 {song.item.name}
               </h1>
             </Link>
           )}
-          <div
-            ref={divRef}
-            className={`flex flex-row ${
-              isDivOverflow && "animate-scroll-text"
-            }`}
-          >
+          <div ref={divRef} className="flex flex-row">
             {!song || error || isLoading ? (
               <div className="mt-1 pt-[8%] w-32 md:w-64 md:pt-[6%] bg-slate-700 max-w-full rounded-sm md:rounded-md"></div>
             ) : (
