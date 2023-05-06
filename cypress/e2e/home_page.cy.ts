@@ -5,6 +5,8 @@ const links = [
   { id: "#buymeacoffee-link", url: "https://www.buymeacoffee.com/sitrixxx" },
 ];
 
+const spotifyTest = ["#album-cover", "#title-name", "#artists-name"];
+
 describe("Home page with widgets", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -30,9 +32,13 @@ describe("Home page with widgets", () => {
   });
 
   it("navigates to album, song and artists pages when clicked", () => {
-    cy.get("#album-cover").should("be.visible").click();
-    cy.get("#title-name").should("be.visible").click();
-    cy.get("#artists-name").should("be.visible").click();
+    spotifyTest.forEach((id) => {
+      cy.get(id)
+        .should("be.visible")
+        .then(($element) => {
+          cy.wrap($element).click();
+        });
+    });
   });
 });
 
