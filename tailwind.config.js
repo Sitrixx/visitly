@@ -7,7 +7,12 @@ module.exports = {
         "gradient-chatbox": "#ff99d3",
       },
       backgroundImage: {
-        test: "url('/images/Maps/map.svg')",
+        greeceGyros: "url('/images/Instagram/greeceGyros.jpg')",
+        greeceBeach: "url('/images/Instagram/greeceBeach.jpg')",
+        chalains: "url('/images/Instagram/chalains.jpg')",
+        copehnsBoat: "url('/images/Instagram/copehnsBoat.jpg')",
+        copehnsBridge: "url('/images/Instagram/copehnsBridge.jpg')",
+        copehnsBronnum: "url('/images/Instagram/copehnsBronnum.jpg')",
         "gradient-insta":
           "linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)",
         "gradient-chatbox":
@@ -17,6 +22,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "column-layout": "1fr 1fr",
+        instaLayout: "min-content min-content min-content",
       },
       gridTemplateRows: {
         "row-layout": "auto auto",

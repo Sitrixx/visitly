@@ -3,6 +3,7 @@ import Image from "next/image";
 import useSpotifyAuth from "@/hooks/spotify/useSpotifyAuth";
 import Link from "next/link";
 import { useRef } from "react";
+import spotifyLogo from "../../../public/images/Spotify/logo.png";
 
 const SpotifyWidget: React.FC = () => {
   const { song, isLoading, error } = useSpotifyAuth();
@@ -10,7 +11,7 @@ const SpotifyWidget: React.FC = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   return (
-    <div className="flex flex-row lg:min-h-[40vh] lg:row-span-3 lg:justify-self-end bg-gradient-spotify w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center border-l-[5px] border-b-[5px] border-green-500 hover:border-none lg:h-full lg:flex-col lg:justify-center">
+    <div className="flex relative flex-row lg:min-h-[40vh] lg:row-span-3 lg:justify-self-end bg-gradient-spotify w-5/6 m-2 py-4 px-6 md:px-7 md:py-4 items-center border-l-[5px] border-b-[5px] border-green-500 hover:border-none lg:h-full lg:flex-col lg:justify-center">
       <div className="w-12 md:w-[4.25rem] lg:w-32 lg:h-4/6 lg:flex lg:flex-col lg:justify-center lg:items-center">
         {!song || error || isLoading ? (
           <div className="pt-[100%] lg:p-[60%] bg-slate-700 max-w-full rounded-md md:rounded-lg animate-pulse"></div>
@@ -71,6 +72,9 @@ const SpotifyWidget: React.FC = () => {
             ))
           )}
         </div>
+      </div>
+      <div className="absolute hidden xl:flex bottom-0 right-0 py-6 px-4">
+        <Image src={spotifyLogo} alt="spotify-logo" height={170} width={170} />
       </div>
     </div>
   );

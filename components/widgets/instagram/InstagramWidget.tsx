@@ -4,6 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import instagramLogo from "../../../public/images/Instagram/logo.png";
 import moi from "../../../public/images/Instagram/instamoi.jpg";
+import clsx from "clsx";
+
+const photos = [
+  "bg-greeceGyros",
+  "bg-greeceBeach",
+  "bg-copehnsBridge",
+  "bg-copehnsBoat",
+  "bg-copehnsBronnum",
+  "bg-chalains",
+];
 
 const InstagramWidget: React.FC = () => {
   return (
@@ -25,16 +35,29 @@ const InstagramWidget: React.FC = () => {
           <h1 className="text-white">Enzo AURIAU</h1>
         </div>
       </div>
-      <div className="hidden lg:flex w-full h-[10vh] xl:h-[36vh] min-h-60 bg-white rounded-xl flex-row p-4 space-x-3 xl:space-x-8">
+      <div className="hidden lg:flex w-full h-[10vh] xl:h-[36vh] min-h-60 bg-white rounded-xl flex-row p-4 space-x-5 xl:space-x-9">
         <div className="w-5/12 xl:w-4/12 2xl:w-3/12">
           <Image src={moi} alt="photo" className="h-full rounded-xl" />
         </div>
-        <div className="text-xl font-medium flex flex-col space-y-4 w-7/12 xl:w-8/12">
+        <div className="text-xl flex flex-col space-y-4 w-7/12 xl:w-8/12">
           <h1 className="font-bold text-2xl">@enzoaur</h1>
-          <div className="xl:flex xl:flex-row xl:w-full xl:items-center xl:space-x-10 text-lg">
-            <p className="text-sm">3 posts</p>
-            <p className="text-sm">144 followers</p>
-            <p className="text-sm">633 following</p>
+          <div className="xl:flex xl:flex-row xl:w-full xl:items-center xl:space-x-8 text-sm 2xl:text-base 2xl:font-medium">
+            <p>3 posts</p>
+            <p>144 followers</p>
+            <p>633 following</p>
+          </div>
+          <div className="hidden xl:grid grid-cols-instaLayout grid-rows-2 w-full gap-y-2 gap-x-7 pt-2">
+            {photos.map((item, index) => {
+              return (
+                <div
+                  className={clsx(
+                    "w-20 h-20 2xl:w-24 2xl:h-24 bg-center bg-cover",
+                    item && item
+                  )}
+                  key={index}
+                ></div>
+              );
+            })}
           </div>
         </div>
       </div>
